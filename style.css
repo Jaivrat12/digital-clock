@@ -1,0 +1,88 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: Verdana, sans-serif;
+    color: white;
+    background: #00001ade;
+}
+
+.wrapper {
+
+    width: 70%;
+    margin: 15% auto 0;
+}
+
+h1 {
+
+    font-size: 52px;
+    text-align: center;
+    letter-spacing: 6px;
+    margin-bottom: 5%;
+}
+
+#clock {
+
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#clock div {
+
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#clock span.time {
+    
+    padding: 20px;
+    font-size: 48px;
+    border-radius: 20px;
+    box-shadow: 2px 3px 12px 1.5px black;
+}
+
+#clock span.unit {
+    
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    text-shadow: 2px 3px 5px black;
+}
+
+#clock div:first-child .time {
+
+    background: #fa5559;
+    /*background-color: rgb(255, 44, 16);*/
+}
+
+#clock div:nth-child(2) .time {
+
+    background: #26c2b9;
+    /*background-color: rgb(123, 175, 40);*/
+}
+
+#clock div:last-child .time {
+
+    background: #2dcb74;
+    /*background-color: rgb(48, 120, 187);*/
+}
+
+.time.turn {
+
+    animation: turn 0.8s;
+}
+
+@keyframes turn {
+
+    0%   {  transform: rotateX(0deg)  }
+    100% { transform: rotateX(360deg) }
+}
